@@ -4663,6 +4663,90 @@ run(function()
 	})
 end)
 
+																																																																																												
+run(function()
+	local Watermark = {Enabled = false}
+	Watermark = GuiLibrary.ObjectsThatCanBeSaved.RenderWindow.Api.CreateOptionsButton({
+		Name = "Watermark",
+		Function = function(callback)
+			if callback then
+		local screenGui = Instance.new("ScreenGui")
+screenGui.Name = "DraggableGUI"
+screenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+local frame = Instance.new("Frame")
+frame.Name = "DraggableFrame"
+frame.Size = UDim2.new(0, 300, 0, 145)
+frame.Position = UDim2.new(0.5, 200, 0.45, -350)
+frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+frame.BackgroundTransparency = 0
+frame.Parent = screenGui
+
+local uiGradient = Instance.new("UIGradient")
+uiGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0, Color3.fromRGB(100, 0, 50)), ColorSequenceKeypoint.new(1, Color3.fromRGB(0, 0, 100))}
+uiGradient.Parent = frame
+
+local uiCorner = Instance.new("UICorner")
+uiCorner.CornerRadius = UDim.new(0, 10)
+uiCorner.Parent = frame
+
+local uiStroke = Instance.new("UIStroke")
+uiStroke.Color = Color3.fromRGB(0, 0, 0)
+uiStroke.Thickness = 2
+uiStroke.Parent = frame
+
+local header = Instance.new("Frame")
+header.Name = "Header"
+header.Size = UDim2.new(1, 0, 0, 50)
+header.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+header.BackgroundTransparency = 1
+header.Parent = frame
+
+local headerText = Instance.new("TextLabel")
+headerText.Size = UDim2.new(1, 0, 1, 0)
+headerText.BackgroundTransparency = 1
+headerText.TextColor3 = Color3.fromRGB(60, 60, 220)
+headerText.Text = "Byfron"
+headerText.TextScaled = true
+headerText.Parent = header
+
+local button = Instance.new("TextButton")
+button.Name = "ActionButton"
+button.Size = UDim2.new(0, 200, 0, 50)
+button.Position = UDim2.new(0.5, -155, 0.5, -25)
+button.BackgroundTransparency = 1
+button.TextColor3 = Color3.fromRGB(255, 0, 255)
+button.Text = "Pure awesomeness by using the power of exploits to demolish your enemys."
+button.TextScaled = true
+button.Parent = frame
+
+local button = Instance.new("TextButton")
+button.Name = "ActionButton"
+button.Size = UDim2.new(0, 100, 0, 50)
+button.Position = UDim2.new(0.8, -50, 0.8, -25)
+button.BackgroundTransparency = 1
+button.TextColor3 = Color3.fromRGB(0, 255, 0)
+button.Text = "Thanks to delzq, qwertyui, and obviously aydexterr. Byfron is finally here."
+button.TextScaled = true
+button.Parent = frame
+
+local button = Instance.new("TextButton")
+button.Name = "ActionButton"
+button.Size = UDim2.new(0, 100, 0, 50)
+button.Position = UDim2.new(0.3, -50, 0.8, -25)
+button.BackgroundTransparency = 1
+button.TextColor3 = Color3.fromRGB(255, 0, 0)
+button.Text = "Current Byfron rank: PRIVATE"
+button.TextScaled = true
+button.Parent = frame
+
+button.MouseButton1Click:Connect(function()
+    print("ez")
+end)
+		HoverText = "Creates a watermark showing Byfron."
+	})
+end)
+
 run(function()
 	local function getallblocks2(pos, normal)
 		local blocks = {}
